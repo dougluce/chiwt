@@ -1,0 +1,37 @@
+{
+	"name": "chiwt",
+	"version": "1.0.0",
+	"description": "Automatically switches Facebook comment filter to 'All comments'",
+	"private": true,
+	"scripts": {
+		"dev": "extension dev",
+		"dev:firefox": "extension dev --browser=firefox",
+		"dev:edge": "extension dev --browser=edge",
+		"build": "extension build",
+		"build:firefox": "extension build --browser=firefox",
+		"build:edge": "extension build --browser=edge",
+		"build:all": "extension build && extension build --browser=firefox && extension build --browser=edge",
+		"preview": "extension preview",
+		"preview:firefox": "extension preview --browser=firefox",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"knip": "knip"
+	},
+	"knip": {
+		"$schema": "https://unpkg.com/knip@6/schema.json",
+		"entry": [
+			"content.js"
+		],
+		"project": [
+			"**/*.js"
+		]
+	},
+	"packageManager": "pnpm@10.33.1",
+	"devDependencies": {
+		"@biomejs/biome": "2.4.13",
+		"@types/node": "^25.6.0",
+		"extension": "latest",
+		"knip": "^6.6.2",
+		"lefthook": "^2.1.6",
+		"typescript": "^6.0.3"
+	}
+}

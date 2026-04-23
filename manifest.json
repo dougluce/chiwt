@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "Comments How I Want Them",
+	"version": "1.0",
+	"description": "Automatically switches the comment filter to 'All comments'",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.facebook.com/*",
+				"https://web.facebook.com/*",
+				"https://m.facebook.com/*",
+				"https://*.m.facebook.com/*"
+			],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"firefox:browser_specific_settings": {
+		"gecko": {
+			"id": "chiwt@extension"
+		}
+	}
+}
